@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 100%;
+      margin: auto;
+      padding: 20px;
+    }
+
+    #publication-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    #publication-list li {
+      background-color: #292929; /* eerie-black-2 */
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    #publication-list li strong {
+      font-weight: bold;
+      color: #c8e500; /* bright yellow */
+    }
+
+    #publication-list li .authors {
+      color: #66ff66; /* neon green */
+    }
+
+    #publication-list li .journal {
+      color:#ffcc00; /* ocean blue */
+    }
+
+    #publication-list li .volume {
+      color: #ff6666; /* coral pink */
+    }
+
+    #publication-list li .year {
+      color: #ff9933; /* orange */
+    }
+
+    #publication-list li .publisher {
+      color: #cc99ff; /* lavender */
+    }
+
+    .year-header {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    /* Responsive layout */
+    @media only screen and (max-width: 600px) {
+      .container {
+        width: 100%;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link" data-nav-link>
+            <button class="navbar-link " data-nav-link>About</button>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="publications.html" class="navbar-link" data-nav-link>
+            <button class="navbar-link active" data-nav-link>Publication</button>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+			<a href="CV.html" class="navbar-link" data-nav-link>
+            <button class="navbar-link" data-nav-link>CV</button>
+             </a> 
+          </li>
+
+         
+
+     
+
+          <li class="navbar-item">
+		  <a href="Contact.html" class="navbar-link" data-nav-link>
+            <button class="navbar-link" data-nav-link>Contact</button>
+			  </a> 
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+
+
+            
+<h2 class="h2 article-title" ; style="color: hsl(45, 100%, 72%);">Publications</h2>
+
+<div class="container">
+  <ul id="publication-list">
+    <!-- Publications will be dynamically added here -->
+  </ul>
+</div>
+
+<script>
+  // Your text data containing publication information
+  const publicationsText = `/* 
+  @article{hussain2026class,
+  title={Class-incremental learning network for real-time anomaly recognition in surveillance environments},
+  author={Hussain, Adnan and Ullah, Waseem and Khan, Noman and Khan, Zulfiqar Ahmad and Yar, Hikmat and Baik, Sung Wook},
+  journal={Pattern Recognition},
+  volume={170},
+  pages={112064},
+  year={2026},
+  publisher={Elsevier}
+}
+  
+
+@article{yar2026novel,
+  title={A novel deep learning framework for battery performance prediction over the operational lifespan},
+  author={Yar, Hikmat and Khan, Zulfiqar Ahmad and Hussain, Adnan and Yoon, Sang Il and Kim, Seoa and Choi, Jungwook and Jeon, Chan Mi and Jeung, Huisu and Kwon, Kyungjung and Baik, Sung Wook},
+  journal={Journal of Energy Storage},
+  volume={143},
+  pages={119359},
+  year={2026},
+  publisher={Elsevier}
+}
+
+
+@article{hussain2025edge,
+  title={Edge-assisted framework for instant anomaly detection and cloud-based anomaly recognition in smart surveillance},
+  author={Hussain, Adnan and Khan, Noman and Khan, Zulfiqar Ahmad and Yar, Hikmat and Baik, Sung Wook},
+  journal={Engineering Applications of Artificial Intelligence},
+  volume={160},
+  pages={111936},
+  year={2025},
+  publisher={Elsevier}
+}
+
+
+@article{munsif2025multi,
+  title={Multi Camera Connected Vision System with Multi View Analytics: A Comprehensive Survey},
+  author={Munsif, Muhammad and Ahmad, Waqas and Ali, Amjid and Ullah, Mohib and Hussain, Adnan and Baik, Sung Wook},
+  journal={arXiv preprint arXiv:2510.09731},
+  year={2025}
+}
+
+
+@article{hussain2025dual,
+  title={Dual stream deep attention networks for annual population projection},
+  author={Hussain, Adnan and Yar, Hikmat and Khan, Noman and Khan, Zulfiqar Ahmad and Kim, Min Je and Baik, Sung Wook},
+  journal={Pattern Analysis and Applications},
+  volume={28},
+  number={2},
+  pages={71},
+  year={2025},
+  publisher={Springer}
+}
+
+
+@article{hussain2024tds,
+  title={TDS-Net: Transformer enhanced dual-stream network for video Anomaly Detection},
+  author={Hussain, Adnan and Ullah, Waseem and Khan, Noman and Khan, Zulfiqar Ahmad and Kim, Min Je and Baik, Sung Wook},
+  journal={Expert Systems with Applications},
+  volume={256},
+  pages={124846},
+  year={2024},
+  publisher={Elsevier}
+}
+
+
+@article{amin2024automated,
+  title={An automated chest X-ray analysis for COVID-19, tuberculosis, and pneumonia employing ensemble learning approach},
+  author={Amin, Sareer Ul and Taj, Sher and Hussain, Adnan and Seo, Sanghyun},
+  journal={Biomedical Signal Processing and Control},
+  volume={87},
+  pages={105408},
+  year={2024},
+  publisher={Elsevier}
+}
+
+
+@article{amin2023deep,
+  title={Deep learning based active learning technique for data annotation and improve the overall performance of classification models},
+  author={Amin, Sareer Ul and Hussain, Adnan and Kim, Bumsoo and Seo, Sanghyun},
+  journal={Expert Systems with Applications},
+  volume={228},
+  pages={120391},
+  year={2023},
+  publisher={Elsevier}
+}
+
+
+@article{hussain2023automated,
+  title={An automated chest X-ray image analysis for covid-19 and pneumonia diagnosis using deep ensemble strategy},
+  author={Hussain, Adnan and Amin, Sareer Ul and Lee, Hunjoo and Khan, Asma and Khan, Noreen Fayyaz and Seo, Sanghyun},
+  journal={IEEE Access},
+  volume={11},
+  pages={97207--97220},
+  year={2023},
+  publisher={IEEE}
+}
+
+
+@article{hussain2023efficient,
+  title={An Efficient and Robust Hand Gesture Recognition System of Sign Language Employing Finetuned Inception-V3 and Efficientnet-B0 Network.},
+  author={Hussain, Adnan and Ul Amin, Sareer and Fayaz, Muhammad and others},
+  journal={Computer Systems Science \& Engineering},
+  volume={46},
+  number={3},
+  year={2023}
+  publisher={Tech Science Press}
+}
+  
+
+*/`;
+
+  // Split the text into individual publications
+  const publications = publicationsText.split('\n\n');
+
+  // Create a dictionary to store publications by year
+  const publicationsByYear = {};
+
+  // Iterate over each publication
+  publications.forEach(publication => {
+    // Extract year from each publication
+    const yearMatch = publication.match(/year={([^}]*)}/);
+    if (yearMatch) {
+      const year = parseInt(yearMatch[1]);
+      // Add publication to the respective year array in the dictionary
+      if (!publicationsByYear[year]) {
+        publicationsByYear[year] = [];
+      }
+      publicationsByYear[year].push(publication);
+    }
+  });
+
+  const publicationList = document.getElementById('publication-list');
+
+  // Iterate over publications by year and display them
+  Object.keys(publicationsByYear).sort((a, b) => b - a).forEach(year => {
+    // Create header for each year
+    const yearHeader = document.createElement('div');
+    yearHeader.classList.add('year-header');
+    yearHeader.textContent = year;
+    publicationList.appendChild(yearHeader);
+
+    // Iterate over publications for the current year
+    publicationsByYear[year].forEach(publication => {
+      // Extract information from the publication
+      const titleMatch = publication.match(/title={([^}]*)}/);
+      const authorMatch = publication.match(/author={([^}]*)}/);
+      const volumeMatch = publication.match(/volume={([^}]*)}/);
+      const publisherMatch = publication.match(/publisher={([^}]*)}/);
+      const journalMatch = publication.match(/journal={([^}]*)}/);
+
+      if (titleMatch && authorMatch && journalMatch && volumeMatch && publisherMatch) {
+        const title = titleMatch[1];
+        const authors = authorMatch[1].split(' and ').map(author => {
+          // Rearrange author names
+          const [lastName, firstName] = author.split(',').map(name => name.trim());
+          return `${firstName} ${lastName}`;
+        }).join(', ');
+        const journal = journalMatch[1];
+        const volume = volumeMatch[1];
+        const publisher = publisherMatch[1];
+
+        // Create list item for the publication
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `<strong>${title}</strong><br>Authors: ${authors}<br>Volume: ${volume}<br>Publisher: ${publisher}<br>Journal: ${journal}`;
+
+        // Append list item to the publication list
+        publicationList.appendChild(listItem);
+      }
+    });
+  });
+
+</script>
+            
+      </article>
+
+</div>
+
+</body>
+
+</html>
